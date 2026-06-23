@@ -1,0 +1,79 @@
+<svg width="760" height="240" viewBox="0 0 680 240" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>TechLab logo</title>
+  <desc>Logo de TechLab con ícono de circuito electrónico y texto con rayo</desc>
+  <defs>
+    <linearGradient id="circuitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a3a5c"/>
+      <stop offset="100%" style="stop-color:#3ab0c0"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ab0c0"/>
+      <stop offset="100%" style="stop-color:#1a6a8a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="240" fill="#ffffff"/>
+
+  <!-- Main L-shaped backbone -->
+  <rect x="118" y="38" width="14" height="150" fill="url(#circuitGrad)"/>
+  <rect x="118" y="174" width="90" height="14" fill="url(#circuitGrad)"/>
+  <rect x="148" y="68" width="10" height="110" fill="url(#circuitGrad)"/>
+  <rect x="148" y="164" width="58" height="10" fill="url(#circuitGrad)"/>
+
+  <!-- Horizontal traces LEFT -->
+  <rect x="52" y="56" width="66" height="6" fill="url(#circuitGrad)"/>
+  <circle cx="50" cy="59" r="5" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <rect x="40" y="82" width="78" height="6" fill="url(#circuitGrad)"/>
+  <rect x="30" y="79" width="10" height="12" fill="url(#circuitGrad)"/>
+
+  <rect x="55" y="108" width="63" height="6" fill="url(#circuitGrad)"/>
+  <circle cx="53" cy="111" r="5" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <rect x="44" y="134" width="74" height="6" fill="url(#circuitGrad)"/>
+  <rect x="34" y="131" width="10" height="12" fill="url(#circuitGrad)"/>
+
+  <rect x="58" y="160" width="60" height="6" fill="url(#circuitGrad)"/>
+  <circle cx="56" cy="163" r="5" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <!-- Bottom circle terminal -->
+  <circle cx="152" cy="196" r="7" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <!-- Horizontal traces RIGHT -->
+  <rect x="132" y="56" width="60" height="6" fill="url(#circuitGrad)"/>
+  <circle cx="194" cy="59" r="5" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <rect x="132" y="82" width="75" height="6" fill="url(#circuitGrad)"/>
+  <rect x="207" y="79" width="10" height="12" fill="url(#circuitGrad)"/>
+
+  <rect x="158" y="108" width="52" height="6" fill="url(#circuitGrad)"/>
+  <circle cx="212" cy="111" r="5" fill="none" stroke="url(#circuitGrad)" stroke-width="2.5"/>
+
+  <rect x="158" y="134" width="44" height="6" fill="url(#circuitGrad)"/>
+  <rect x="202" y="131" width="10" height="12" fill="url(#circuitGrad)"/>
+
+  <!-- Scattered pixel squares top-right -->
+  <rect x="180" y="38" width="10" height="10" fill="url(#circuitGrad)" opacity="0.9"/>
+  <rect x="196" y="28" width="14" height="14" fill="url(#circuitGrad)" opacity="0.7"/>
+  <rect x="214" y="42" width="8" height="8" fill="url(#circuitGrad)" opacity="0.5"/>
+  <rect x="200" y="55" width="6" height="6" fill="url(#circuitGrad)" opacity="0.6"/>
+
+  <!-- Scattered pixel squares bottom-left -->
+  <rect x="38" y="168" width="12" height="12" fill="url(#circuitGrad)" opacity="0.8"/>
+  <rect x="24" y="180" width="10" height="10" fill="url(#circuitGrad)" opacity="0.6"/>
+  <rect x="46" y="184" width="7" height="7" fill="url(#circuitGrad)" opacity="0.5"/>
+
+  <!-- Dot pixels scattered -->
+  <rect x="90" y="95" width="5" height="5" fill="url(#circuitGrad)" opacity="0.5"/>
+  <rect x="98" y="103" width="4" height="4" fill="url(#circuitGrad)" opacity="0.4"/>
+  <rect x="84" y="110" width="4" height="4" fill="url(#circuitGrad)" opacity="0.45"/>
+  <rect x="100" y="148" width="5" height="5" fill="url(#circuitGrad)" opacity="0.4"/>
+  <rect x="90" y="155" width="4" height="4" fill="url(#circuitGrad)" opacity="0.35"/>
+  <rect x="108" y="160" width="4" height="4" fill="url(#circuitGrad)" opacity="0.4"/>
+
+  <!-- TEXT: TechLab -->
+  <text x="252" y="155" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="90" font-weight="700" fill="#2d3d50" text-anchor="start" letter-spacing="-1">TechLab</text>
+
+  <!-- BOLT ICON -->
+  <polygon points="642,68 628,128 641,128 626,178 660,108 645,108 658,68" fill="url(#boltGrad)"/>
+</svg>

@@ -1,33 +1,42 @@
 "use client";
-import {  useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import logo from '../statics/logo.png'
+import {Searcher} from '../components/Searcher'
 import {ProductCard} from '../components/ProductCard'
 import {ProductList} from '../components/ProductList'
-import {getProducts} from '../api/api'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import {fetchProducts} from '../slices/dataSlice'
+
 
 export default function Home() {
-  const [products, setProducts] = useState<any[]>([])
+  const [searchValue, setSearchValue] = useState('')
+  const products = useSelector((state:any) => state.data.products, shallowEqual)
+  const dispatch = useDispatch<any>()
+
+  const filteredProducts = products.filter((item: any) => 
+    item.title.toLowerCase().includes(searchValue.toLowerCase()) || 
+    item.category.toLowerCase().includes(searchValue.toLowerCase())
+);
 
   useEffect(()=>{
-    const fetchProducts = async () =>{
-      try{
-        const productData = await getProducts() as any
-        setProducts(productData)
-      }
-      catch(err){
-        console.log('page: ' + err)
-      }
-    }
-    
-    fetchProducts()
+    dispatch(fetchProducts())
   },[])
   
   console.log(products)
   
+
+
   return (
     <>
+    <div className='pt-10 w-full flex justify-center'>
+      <img src={logo.src} alt='TechLab logo' width={250}/>
+    </div>
+    <Searcher 
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+/>
       <ProductList >
-        {products.map(product => (
+        {filteredProducts.map((product: any) => (
           <ProductCard 
           key={product.id}
           title={product.title}
@@ -38,4 +47,7 @@ export default function Home() {
       </ProductList>
     </>
   );
+
+
+
 }

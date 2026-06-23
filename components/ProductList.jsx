@@ -1,6 +1,8 @@
+import '../css/ProductList.css'
+
 function ProductList ({children}){
     return(
-        <div>
+        <div className="ProductList">
             {children}
         </div>
     )
