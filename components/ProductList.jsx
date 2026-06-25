@@ -1,4 +1,4 @@
-import '../css/ProductList.css'
+import './ProductList.css'
 
 function ProductList ({children}){
     return(

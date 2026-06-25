@@ -11,6 +11,8 @@ import {fetchProducts} from '../slices/dataSlice'
 export default function Home() {
   const [searchValue, setSearchValue] = useState('')
   const products = useSelector((state:any) => state.data.products, shallowEqual)
+  const loading = useSelector((state: any) => state.ui.loading)
+  
   const dispatch = useDispatch<any>()
 
   const filteredProducts = products.filter((item: any) => 
@@ -35,6 +37,11 @@ export default function Home() {
       searchValue={searchValue}
       setSearchValue={setSearchValue}
 />
+      {loading && (
+        <div className="flex justify-center items-center py-10 w-full">
+          <div className="w-10 h-10 rounded-full border-4 border-gray-200 border-t-blue-700 animate-spin" />
+        </div>
+      )}
       <ProductList >
         {filteredProducts.map((product: any) => (
           <ProductCard 
