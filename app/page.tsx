@@ -39,9 +39,12 @@ export default function Home() {
         {filteredProducts.map((product: any) => (
           <ProductCard 
           key={product.id}
+          id={product.id}
           title={product.title}
           image={product.images[0]}
           category={product.category}
+          favorite = {product.favorite}
+          price={product.price}
           />
         ))}
       </ProductList>

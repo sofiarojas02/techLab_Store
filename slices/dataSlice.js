@@ -19,9 +19,21 @@ export const dataSlice = createSlice({
     reducers: {
         setProducts: (state, action) => {
             state.products = action.payload;
+        },
+
+        setFavorite: (state, action) => {
+            const productFindId = state.products.findIndex(product => (
+                product.id === action.payload.productId
+            ))
+
+            if(productFindId >= 0){
+                const isFavorite = state.products[productFindId].favorite
+
+                state.products[productFindId].favorite = !isFavorite
+            }
         }
     }
 })
 
-export const {setProducts} = dataSlice.actions
+export const {setFavorite, setProducts} = dataSlice.actions
 export default dataSlice.reducer
